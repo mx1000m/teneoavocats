@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TENEO AVOCATS | Real Estate & Corporate Law</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        @font-face {
+            font-family: 'Didot';
+            src: url('Didot.ttc') format('truetype-collection');
+        }
+
+        body {
+            background-color: black;
+            color: white;
+        }
+    
+        section {
+            padding: 80px 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+        }
+    
+        .hero {
+            text-align: center;
+        }
+    
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 1px;
+            height: 100px;
+            background: linear-gradient(to bottom, rgba(255,255,255,0.3), transparent);
+        }
+    
+        .hero h1 {
+            font-family: 'Didot', serif;
+            font-size: 4rem;
+            margin-bottom: 20px;
+            font-weight: 400;
+            letter-spacing: 6px;
+        }
+    
+        .hero p {
+            font-family: 'Arial';
+            font-size: 1.1rem;
+            max-width: 600px;
+            font-weight: 300;
+            margin: 0 auto;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.9);
+            letter-spacing: 2px;
+        }
+    
+        .services {
+            text-align: center;
+            background-color: white;
+            color: black;
+        }
+    
+        .services h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            font-weight: 300;
+            color: black;
+        }
+    
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            margin-top: 40px;
+            padding: 0 20px;
+        }
+    
+        .service-item {
+            text-align: left;
+            padding: 30px;
+            border: 2px solid rgba(255,255,255,0.1);
+            background-color: black;
+            color: white;
+            transition: all 0.3s;
+        }
+
+        .service-item p {
+            color: rgba(255,255,255,0.8);
+            transition: all 0.3s;
+        }
+    
+        .service-item:hover {
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0)!important;
+            border: 2px solid rgba(0, 0, 0, 1);
+        }
+
+        .service-item:hover p{
+            color: rgba(0, 0, 0, 0.8);
+        }
+    
+        .team {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+    
+        .about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            font-weight: 300;
+            text-align: center;
+        }
+    
+        .team-member {
+            flex: 1;
+            min-width: 150px;
+            position: relative;
+            overflow: hidden;
+        }
+    
+        .team-member img {
+            width: 100%;
+            aspect-ratio: 1;
+            object-fit: cover;
+            margin-bottom: 20px;
+            filter: grayscale(100%);
+            transition: transform 0.3s;
+        }
+    
+        .team-member:hover img {
+            transform: scale(1.05);
+        }
+    
+        .team-member h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            font-weight: 400;
+        }
+    
+        .contact {
+            text-align: center;
+            background-color: white;
+            color: black;
+        }
+    
+        .contact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            font-weight: 300;
+            color: black;
+        }
+
+        .contact p {
+            color: rgba(0,0,0,0.8);
+        }
+    
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            border: 2px solid black;
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            margin-top: 30px;
+            background-color: black;
+            transition: all 0.3s;
+        }
+    
+        .button:hover {
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+        }
+    
+        p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: rgba(255,255,255,0.8);
+        }
+    
+        
+        /* Update SVG colors for contact section */
+        .contact svg path,
+        .contact svg line {
+            stroke: black;
+        }
+
+        .contact svg circle {
+            fill: black;
+            stroke: black;
+        }
+
+
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: black;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.7rem;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <h1>TENEO AVOCATS</h1>
+        <p>Real Estate & Corporate Law</p>
+    </section>
+
+    <section class="services">
+        <h2>Our Expertise</h2>
+        <div class="services-grid">
+            <div class="service-item">
+                <h3>Real Estate Law</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div class="service-item">
+                <h3>Corporate Law</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div class="service-item">
+                <h3>Commercial Transactions</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div class="service-item">
+                <h3>Legal Consultation</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="about">
+        <h2>Our Partners</h2>
+        <div class="team">
+            <div class="team-member">
+                <img src="/placeholder.webp" alt="Partner 1">
+                <h3>Jimmy Serapionian</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="team-member">
+                <img src="/placeholder.webp" alt="Partner 2">
+                <h3>Nikola Zivanovic</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="team-member">
+                <img src="/placeholder.webp" alt="Partner 3">
+                <h3>Nikola Zivanovic</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <p>176 rue de Rivoli<br>75001 Paris, France<br>+33 (0)1 23 45 67 89</p>
+        <a href="mailto:contact@teneo-avocats.fr" class="button">Contact us</a>
+    </section>
+
+
+    <footer class="footer">
+        © 2025 TENEO AVOCATS | All rights reserved.
+    </footer>
+
+    
+</body>
+</html>
