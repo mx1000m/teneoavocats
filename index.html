@@ -216,6 +216,100 @@
 
 
 
+
+
+
+
+
+
+
+
+
+        @media screen and (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem; /* Smaller font size for mobile */
+                letter-spacing: 4px;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+                padding: 0 20px;
+            }
+            
+            section {
+                padding: 60px 15px; /* Reduced padding on mobile */
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr; /* Single column on mobile */
+                gap: 20px; /* Reduced gap */
+                padding: 0 10px;
+            }
+            
+            .service-item {
+                padding: 20px; /* Reduced padding */
+            }
+            
+            .team {
+                gap: 20px;
+            }
+            
+            .team-member {
+                flex: 1 1 100%; /* Full width on mobile */
+                min-width: 100%;
+            }
+            
+            h2 {
+                font-size: 2rem; /* Smaller headings on mobile */
+            }
+            
+            .team-member h3 {
+                font-size: 1.3rem;
+            }
+            
+            .button {
+                padding: 12px 25px; /* Slightly smaller button */
+            }
+        }
+
+        /* Additional responsive adjustments for very small screens */
+        @media screen and (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+                letter-spacing: 3px;
+            }
+            
+            section {
+                padding: 40px 10px;
+            }
+            
+            .services h2, .about h2, .contact h2 {
+                font-size: 1.8rem;
+                margin-bottom: 30px;
+            }
+        }
+
+        /* Touch device optimization */
+        @media (hover: none) {
+            .service-item {
+                transition: none; /* Remove hover transitions on touch devices */
+            }
+            
+            .team-member img {
+                transform: none;
+                transition: none;
+            }
+        }
+
+
+
+
+
+
+
+
+        
+
     </style>
 </head>
 <body>
