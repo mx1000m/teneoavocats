@@ -49,6 +49,14 @@
             background: linear-gradient(to bottom, rgba(255,255,255,0.3), transparent);
         }
     
+.hero span {
+            font-family: 'Didot', serif;
+            font-size: 4rem;
+            margin-bottom: 20px;
+            font-weight: 400;
+            letter-spacing: 6px;
+        }
+
         .hero h1 {
             font-family: 'Didot', serif;
             font-size: 4rem;
@@ -196,8 +204,6 @@
             color: rgba(255,255,255,0.8);
         }
     
-        
-        /* Update SVG colors for contact section */
         .contact svg path,
         .contact svg line {
             stroke: black;
@@ -208,7 +214,6 @@
             stroke: black;
         }
 
-
         .footer {
             text-align: center;
             padding: 40px 20px;
@@ -217,25 +222,14 @@
             font-size: 0.8rem;
         }
 
-
-
-
-
-
-
-
-/* Hide scrollbar for Chrome, Safari and Opera */
-::-webkit-scrollbar {
+        ::-webkit-scrollbar {
             display: none;
         }
         
-        /* Hide scrollbar for IE, Edge and Firefox */
         html {
-            -ms-overflow-style: none;  /* IE and Edge */
-            scrollbar-width: none;  /* Firefox */
+            -ms-overflow-style: none;
+            scrollbar-width: none;
         }
-
-
 
 
 
@@ -247,8 +241,24 @@
 
         @media screen and (max-width: 768px) {
             .hero h1 {
-                font-size: 2.5rem; /* Smaller font size for mobile */
+                font-size: 4rem;
                 letter-spacing: 4px;
+                /* Add these properties for two-line title */
+                display: flex;
+                flex-direction: column;
+                gap: 0px;
+            }
+            
+            .hero h1::after {
+                content: "AVOCATS";
+            }
+            
+            .hero h1::before {
+                content: "TENEO";
+            }
+            
+            .hero h1 span {
+                display: none;
             }
             
             .hero p {
@@ -257,17 +267,17 @@
             }
             
             section {
-                padding: 60px 15px; /* Reduced padding on mobile */
+                padding: 60px 15px;
             }
             
             .services-grid {
-                grid-template-columns: 1fr; /* Single column on mobile */
-                gap: 20px; /* Reduced gap */
+                grid-template-columns: 1fr;
+                gap: 20px;
                 padding: 0 10px;
             }
             
             .service-item {
-                padding: 20px; /* Reduced padding */
+                padding: 20px;
             }
             
             .team {
@@ -275,12 +285,12 @@
             }
             
             .team-member {
-                flex: 1 1 100%; /* Full width on mobile */
+                flex: 1 1 100%;
                 min-width: 100%;
             }
             
             h2 {
-                font-size: 2rem; /* Smaller headings on mobile */
+                font-size: 2rem;
             }
             
             .team-member h3 {
@@ -288,11 +298,10 @@
             }
             
             .button {
-                padding: 12px 25px; /* Slightly smaller button */
+                padding: 12px 25px;
             }
         }
 
-        /* Additional responsive adjustments for very small screens */
         @media screen and (max-width: 480px) {
             .hero h1 {
                 font-size: 2rem;
@@ -309,10 +318,9 @@
             }
         }
 
-        /* Touch device optimization */
         @media (hover: none) {
             .service-item {
-                transition: none; /* Remove hover transitions on touch devices */
+                transition: none;
             }
             
             .team-member img {
@@ -320,21 +328,11 @@
                 transition: none;
             }
         }
-
-
-
-
-
-
-
-
-        
-
     </style>
 </head>
 <body>
     <section class="hero">
-        <h1>TENEO AVOCATS</h1>
+        <h1><span>TENEO AVOCATS</span></h1>
         <p>Real Estate & Corporate Law</p>
     </section>
 
@@ -387,11 +385,8 @@
         <a href="mailto:contact@teneo-avocats.fr" class="button">Contact us</a>
     </section>
 
-
     <footer class="footer">
         © 2025 TENEO AVOCATS | All rights reserved.
     </footer>
-
-    
 </body>
 </html>
